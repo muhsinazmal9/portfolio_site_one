@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
+
+
+/* COMMON */
+:root{
+    --color-body : #b6cbce;
+    --color-heading : #eef3db;
+    --color-base : #033f47;
+    --color-base2 : #022a30;
+    --color-brand : #e0f780;
+    --color-brand2 : #deff58;
+    --sidebar-width : 250px;
+    --font-base : 'Bai Jamjuree';
+}
+
+body{
+    background: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover{
+    color: var(--color-brand);
+}
+
+.navbar{
+    background: var(--color-base);
+}
+
+
+
+.h_full{
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 2px solid rgb(255, 255, 255, 0.1);
+}
+
+.text_brand{
+    color: var(--color-brand);
+}
+/* // COMMON */
+
+
+
+
+
+
+
+
+
+/* STYLE */
+.navbar .nav-link{
+    color: #fff;
+    transition: 0.4s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+    color: var(--color-brand);
+}
+
+
+.navbar-brand img{
+    border: 8px solid var(--color-brand);
+}
+
+/* BTN */
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+.btn_brand{
+    background: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+.btn_brand:hover,
+.btn_brand:focus{
+    background: var(--color-brand2);
+    border-color: var(--color-brand2);
+    color: var(--color-base);
+}
+/* // BTN */
+
+/* CUSTOM LINK */
+.custom_link::after{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    transition: all 0.4s ease;
+}
+.custom_link:hover::after{
+    width: 100%;
+}
+/* //CUSTOM LINK */
+
+
+/* // STYLE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 992px) {
+    /* NAVBAR */
+    .navbar{
+        height: 100vh;
+        width: var(--sidebar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.75),rgba(3, 63, 71, 0.9)), url(../img/sidebar-bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    /* CONTENT WRAPPER */
+    #content_wrapper{
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/* // MEDIA QUERY */

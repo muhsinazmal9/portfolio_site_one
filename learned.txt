@@ -1,0 +1,1 @@
+navbar dark works for all the items match to dark background, not do the bg dark
